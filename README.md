@@ -81,7 +81,7 @@ flowbit/
 
 ### Clone the repo
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/arun4589/AI_multi_agent_document_processor
 cd flowbit
 ```
 

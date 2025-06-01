@@ -34,10 +34,26 @@ if __name__ == "__main__":
     }
     """
     sample_email = """
-    Subject: Urgent RFQ
-    Hello team,
-    Please send a quote for 500 units of solar panels.
-    Regards,
-    John
+    Subject: Request for Quote for Solar Panels
+
+Dear John,
+
+I hope you are doing well.
+
+I am reaching out to request a quotation for solar panels. We are looking to purchase solar panels for a rooftop installation and would like to know the pricing and specifications for the following:
+
+Solar panel capacity:  550W each
+
+Quantity: 10 panels
+
+Delivery location: Capetown
+
+Any warranties or after-sales support included
+
+
+Looking forward to your quote.
+
+Best regards,
+Vetori
     """
     run(sample_email)

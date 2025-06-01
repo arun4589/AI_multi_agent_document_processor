@@ -8,14 +8,18 @@ def email_agent(state: dict) -> dict:
 ---
 {text}
 ---
-Respond in JSON with sender, urgency, and message_summary."""
+Respond strictly means strictly in JSON with  intent ,sender, urgency, and message_summary."""
     result = query_ollama(prompt)
 
     # Save to memory
     print(state['intent'])
-    print(result)
-    parsed_result = json.loads(result)
-    log_to_memory(source="email", file_type="Email", intent=state["intent"], extracted_data=parsed_result)
+    # print('hi')
+    # print(result)
+    # parsed_result = json.loads(result)
+    try:
+       log_to_memory(source="email", file_type="Email", intent=state["intent"], extracted_data=result)
+    except Exception as e:
+       print("DB Error:", e)
 
     state["output"] = result
     return state
